@@ -1,0 +1,61 @@
+/* Global styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.5);
+}
+header .logo img { height: 40px; }
+header nav ul { display: flex; list-style: none; }
+header nav ul li { margin-left: 20px; }
+header nav a { color: #fff; text-decoration: none; }
+
+/* Hero */
+.hero { text-align: center; padding: 100px 20px; }
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero .btn {
+  display: inline-block; padding: 10px 20px; margin-top: 20px;
+  background: #ffd700; color: #000; text-decoration: none; border-radius: 5px;
+}
+
+/* Carousel */
+.carousel { position: relative; overflow: hidden; margin: 50px auto; width: 90%; max-width: 800px; }
+.carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-item { min-width: 100%; }
+.carousel img { width: 100%; border-radius: 10px; }
+.carousel button {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.5); border: none; color: #fff; padding: 10px;
+}
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
+.gallery-grid img { width: 100%; border-radius: 10px; transition: transform 0.3s; }
+.gallery-grid img:hover { transform: scale(1.05); }
+
+/* Forms */
+form { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
+input, textarea { padding: 10px; border: none; border-radius: 5px; }
+button { background: #ffd700; color: #000; border: none; padding: 10px; cursor: pointer; border-radius: 5px; }
+
+/* Footer */
+footer { text-align: center; padding: 20px; background: rgba(0,0,0,0.7); margin-top: 40px; }
+
+/* Responsive nav */
+nav ul { display: none; flex-direction: column; }
+nav ul.show { display: flex; }
+#nav-toggle, #nav-toggle-2, #nav-toggle-3, #nav-toggle-4, #nav-toggle-5 { background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; }
+@media(min-width: 768px) {
+  nav ul { display: flex !important; flex-direction: row; }
+  #nav-toggle, #nav-toggle-2, #nav-toggle-3, #nav-toggle-4, #nav-toggle-5 { display: none; }
+}
